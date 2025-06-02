@@ -22,7 +22,6 @@ export function setupForm() {
       completed: false,
     };
 
-    // Get current tasks from localStorage
     const tasks = JSON.parse(localStorage.getItem("tasks") || "[]");
     tasks.push(newTask);
     localStorage.setItem("tasks", JSON.stringify(tasks));

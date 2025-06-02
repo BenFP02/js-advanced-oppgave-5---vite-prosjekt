@@ -70,7 +70,6 @@ export function renderTasks() {
       })}`;
     }
 
-    // Add title + due date
     const textSpan = document.createElement("span");
     textSpan.textContent = `${task.title}${dueText}${createdText}`;
     if (task.completed) {
@@ -78,7 +77,6 @@ export function renderTasks() {
       textSpan.style.opacity = "0.6";
     }
 
-    // Delete button
     const deleteBtn = document.createElement("button");
     deleteBtn.textContent = "🗑️";
     deleteBtn.style.marginLeft = "1rem";
@@ -88,7 +86,6 @@ export function renderTasks() {
       renderTasks();
     });
 
-    // Build and append
     li.appendChild(checkbox);
     li.appendChild(textSpan);
     li.appendChild(deleteBtn);
